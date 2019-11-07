@@ -41,5 +41,16 @@ namespace Notes
                 });
             }
         }
+
+        
+
+        private void ChangeColorClicked(object sender, EventArgs e)
+        {
+            this.InitializeComponent();
+            //查找资源
+            
+
+
+        }
     }
 }

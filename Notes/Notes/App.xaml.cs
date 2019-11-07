@@ -7,6 +7,7 @@ namespace Notes
 {
     public partial class App : Application
     {
+        
         static NoteDataBase dataBase;
         public static NoteDataBase DataBase
         {

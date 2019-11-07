@@ -4,16 +4,19 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Notes.NotesPage">
-
+             x:Class="Notes.NotesPage"
+             Style="{StaticResource MyStyleForC}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
                      Clicked="OnNoteAddedClicked">
         </ToolbarItem>
+        <ToolbarItem Text="换色" Clicked="ChangeColorClicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"
-              Margin="20"
-              ItemSelected="OnListViewItemSelected">
+              Margin="{StaticResource K}"
+              ItemSelected="OnListViewItemSelected"
+              
+              >
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Text}"
