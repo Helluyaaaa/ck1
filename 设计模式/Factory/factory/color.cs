@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace 设计模式.Factory
 {
-    interface Icolor
+    public interface Icolor
     {
         void fill();
     }

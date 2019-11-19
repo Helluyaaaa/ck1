@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory_\AbstractFactory.cs" />
+    <Compile Include="AbstractFactory_\ColorFactory.cs" />
+    <Compile Include="AbstractFactory_\FactoryProducer.cs" />
+    <Compile Include="AbstractFactory_\shapeFactory.cs" />
+    <Compile Include="Builder_\Boss.cs" />
+    <Compile Include="Builder_\Builder.cs" />
+    <Compile Include="Builder_\Class1.cs" />
+    <Compile Include="Builder_\Class2.cs" />
+    <Compile Include="Builder_\computer.cs" />
+    <Compile Include="Builder_\Customer.cs" />
+    <Compile Include="copy\Client.cs" />
+    <Compile Include="dan_li\danli.cs" />
     <Compile Include="Factory\chouxiangFactory.cs" />
     <Compile Include="Factory\factory\color.cs" />
     <Compile Include="Factory\shiti\color\green.cs" />
@@ -56,5 +69,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
