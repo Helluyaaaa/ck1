@@ -11,7 +11,7 @@ namespace HouseApp
     {
         [Preserve]
         public Houseapp() :base(new ApplicationOptions(assetsFolder: "Data") 
-        { Height=1024,Width=578,Orientation=ApplicationOptions.OrientationType.Portrait})
+        { Height=512,Width=256,Orientation=ApplicationOptions.OrientationType.Portrait})
         { }
 
         [Preserve]

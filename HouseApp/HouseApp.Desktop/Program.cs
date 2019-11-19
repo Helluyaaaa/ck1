@@ -12,7 +12,7 @@ namespace HouseApp.Desktop
     {
         static void Main(string[] args)
         {
-            DesktopUrhoInitializer.AssetsDirectory = @"D:\ck1\HouseApp\Assets";
+            DesktopUrhoInitializer.AssetsDirectory = @"C:\Users\94351\source\repos\ck1\HouseApp\Assets";
             new Houseapp().Run();
         }
     }

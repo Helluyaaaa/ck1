@@ -8,12 +8,12 @@ namespace HouseApp
     {
         public static class Models
         {
-            public const string House = @"D:\ck1\HouseApp\Assets\Data\Models\House.mdl";
-            public const string Apple = @"D:\ck1\HouseApp\Assets\Data\Models\Apple.mdl";
+            public const string House = @"Models\House.mdl";
+            public const string Apple = @"Models\Apple.mdl";
         }
         public static class Materials
         {
-            public const string House = @"D:\ck1\HouseApp\Assets\Data\Meterial\House.xml";
+            public const string House = @"Meterial\House.xml";
         }
         public static class PostProcess
         {
