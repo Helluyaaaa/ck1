@@ -14,6 +14,7 @@ namespace HouseApp
         public static class Materials
         {
             public const string House = @"Meterial\House.xml";
+            public const string Apple = @"Meterial\Apple.xml";
         }
         public static class PostProcess
         {
