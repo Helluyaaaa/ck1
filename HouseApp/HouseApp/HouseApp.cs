@@ -6,6 +6,8 @@ using Urho.Physics;
 using Urho.Actions;
 using Urho.Shapes;
 using HouseApp.物品;
+using System.IO;
+
 namespace HouseApp
 {
     public class Houseapp:Application
@@ -33,7 +35,19 @@ namespace HouseApp
 
             //camera
             var cameraNode = scene.CreateChild();
-            cameraNode.Position = (new Vector3(0.0f, 2.0f, -8.0f));
+            cameraNode.Position = (new Vector3(0.0f, 0.0f, -8.0f));
+            cameraNode.SetDirection(new Vector3(0.1f, 0f, 900f));
+            /*string filepath = "D:\\dir.txt";
+            var dir =  cameraNode.Direction;
+            if (!File.Exists(filepath))
+            {
+                File.Create(filepath).Dispose();
+                File.WriteAllText(filepath, "X:" + dir.X.ToString() + "Y:" + dir.Y.ToString() + "Z:" + dir.Z.ToString() + "\n");
+            }
+            else
+            {
+                File.AppendAllText(filepath, "X:" + dir.X.ToString() + "Y:" + dir.Y.ToString() + "Z:" + dir.Z.ToString() + "\n");
+            }*/
             cameraNode.CreateComponent<Camera>();
             Viewport = new Viewport(Context, scene, cameraNode.GetComponent<Camera>(), null);
             if (Platform != Platforms.Android && Platform != Platforms.iOS)
@@ -45,25 +59,25 @@ namespace HouseApp
             }
             Renderer.SetViewport(0, Viewport);
 
-            //神说要有光 然后就有了Light
-            var lightNode = scene.CreateChild();
-            lightNode.Position = new Vector3(-20, 0, -40);
-            lightNode.AddComponent(new Light { Range = 100, Brightness = 1f });
-
+            
             //zone construct- 构造分区
             var zoneNode = scene.CreateChild();
             var zone = zoneNode.CreateComponent<Zone>();
             zone.SetBoundingBox(new BoundingBox(-300.0f, 300.0f));
-            zone.AmbientColor = new Color(1f, 1f, 1f);
+            zone.AmbientColor = new Color(1, 1, 1);
 
+            //生成背景
+            var backgroud = new Backgroud();
+            scene.AddComponent(backgroud);
+            backgroud.Start();
             //生成house
             var house = new House();
             scene.AddComponent(house);
-            house.start();
+            house.Start();
             //生成Apple
             var apple = new Apple();
             scene.AddComponent(apple);
-            apple.start();
+            apple.Start();
             
 
 

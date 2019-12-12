@@ -1,0 +1,20 @@
+﻿{
+  "culture": "zh-Hans",
+  "texts": {
+    "HelloWorld": "你好，世界！",
+    "ChangeLanguage": "更改语言",
+    "HomePage": "主页",
+    "About": "关于",
+    "Home_Description": "欢迎使用ABP.",
+    "About_Description": "这是基于.Net Core的ABP框架的简单示例",
+    "LoginUser": "登录用户列表",
+    "Create New": "新增",
+    "Update LoginUser": "修改",
+    "Close New": "关闭",
+    "Delete": "删除",
+    "New": "新建的用户",
+    "LoginUserName": "用户名",
+    "LoginUserPassword": "用户密码",
+    "Submit": "提交"
+  }
+}

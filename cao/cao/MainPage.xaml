@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cao.MainPage">
+
+    <StackLayout>
+        <Button Text="Move" x:Name="button1" 
+                Clicked="clickedEvent1"
+                HorizontalOptions="CenterAndExpand"></Button>
+        <Image x:Name="image"
+               Source="momiji"  
+               HorizontalOptions="CenterAndExpand"
+               HeightRequest="400"
+               />
+        
+        <Button Text="下一页" x:Name="button2" 
+                Clicked="button2_Clicked"
+                HorizontalOptions="Center"></Button>
+    </StackLayout>
+
+</ContentPage>

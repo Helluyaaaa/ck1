@@ -1,0 +1,87 @@
+﻿@model HouseHoldManagementSystem.ABP.Web.Models.LoginUser.LoginUserListViewModel
+
+@{
+    ViewData["Title"] = L("LoginUser");
+    ViewData["ActiveMenu"] = "LoginUser";
+}
+@section scripts
+{
+    <script src="~/js/views/loginuser/index.js" asp-append-version="true"></script>
+}
+<h2>@L("LoginUser")</h2>
+
+<p>
+    <div>
+        <a href="#" id="create-loginuser">@L("Create New")</a>
+        <a href="#" id="close-create" style="display:none">@L("Close New")</a>
+    </div>
+</p>
+<form>
+    <div id="createnew" style="display:none">
+        <div>
+            <label>@L("New")</label>
+        </div>
+        <div>
+            <label for="loginname">@L("LoginUserName")</label>
+            <input id="loginname" type="text" name="Name" />
+        </div>
+        <div>
+            <label for="loginpwd"> @L("LoginUserPassword")</label>
+            <input id="loginpwd" type="text" name="Id" />
+        </div>
+        <div>
+            <a href="#" class="submit-loginuser">@L("Submit")</a>
+        </div>
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <td>序号</td>
+            <td>登录名</td>
+            <td>密码</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var loginuser in Model.LoginUsers)
+        {
+        <tr>
+            <td>
+                @loginuser.Id
+            </td>
+            <td>
+                @loginuser.LoginName
+            </td>
+            <td>
+                @loginuser.Password
+            </td>
+            <td>
+                <a href="#" class="delete-loginuser" data-loginuser-id="@loginuser.Id">@L("Delete")</a>
+            </td>
+            <td>
+                <a href="#" class="update-loginuser" data-loginuser-id="@loginuser.Id">@L("Update LoginUser")</a>
+                <a href="#" id="close-update" >@L("Close New")</a>
+                <form>
+                    <div id="update-user" style="display:none">
+                        <div>
+                            <label>@L("New")</label>
+                        </div>
+                        <div>
+                            <label for="loginname">@L("LoginUserName")</label>
+                            <input id="loginname" type="text" name="Name" />
+                        </div>
+                        <div>
+                            <label for="loginpwd"> @L("LoginUserPassword")</label>
+                            <input id="loginpwd" type="text" name="Id" />
+                        </div>
+                        <div>
+                            <a href="#" class="submit-loginuser">@L("Submit")</a>
+                        </div>
+                    </div>
+                </form>
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

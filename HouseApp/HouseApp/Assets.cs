@@ -10,11 +10,13 @@ namespace HouseApp
         {
             public const string House = @"Models\House.mdl";
             public const string Apple = @"Models\Apple.mdl";
+            public const string Backgroud = @"Models\Backgroud.mdl";
         }
         public static class Materials
         {
             public const string House = @"Meterial\House.xml";
             public const string Apple = @"Meterial\Apple.xml";
+            public const string Grass = @"Meterial\Grass.xml";
         }
         public static class PostProcess
         {

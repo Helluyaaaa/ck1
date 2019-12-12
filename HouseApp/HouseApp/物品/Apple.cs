@@ -8,7 +8,7 @@ namespace HouseApp.物品
     {
         Node Tile;
 
-        public void start()
+        public void Start()
         {
             Tile = CreateTile();
         }
@@ -18,7 +18,7 @@ namespace HouseApp.物品
             Node tile = Node.CreateChild();
 
             var AppleNode = tile.CreateChild();
-            AppleNode.Rotate(new Quaternion(0f, 0f, 0f), TransformSpace.Local);
+            AppleNode.Rotate(new Quaternion(30f, 30f, 30f), TransformSpace.Local);
             AppleNode.Scale = new Vector3(1f, 1f, 1f);
 
             var AppleObj = AppleNode.CreateComponent<StaticModel>();
